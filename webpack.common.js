@@ -33,7 +33,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'JSON Schema Viewer',
+      title: 'Datafactor Data Catalog',
       template: 'index.html',
       publicPath: '/',
       filename: 'index.html'

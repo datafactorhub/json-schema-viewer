@@ -18,11 +18,11 @@ const DevelopingSchemaInstructions = `
 ## Developing a JSON Schema
 
 If you are busy writing or generating a JSON Schema and you want to get a live experience of viewing that schema using
-JSON Schema Viewer then you have a few options.
+Datafactor Data Catalog then you have a few options.
 
 ### Using a locally running server
 
-JSON Schema Viewer will work so long as your JSON Schema is accessible via a HTTP Get request from your web browser.
+Datafactor Data Catalog will work so long as your JSON Schema is accessible via a HTTP Get request from your web browser.
 This means that you can just host the file on your own machine and edit it from there. For example:
 
 1. In a terminal, go to the directory on your local filesystem that contains your JSON Schema.
@@ -34,7 +34,7 @@ This means that you can just host the file on your own machine and edit it from 
 1. Copy the URL for the JSON Schema and paste it into the input above.
 
 And there you have it! You can now view your JSON Schema here. Using this method, you can also live edit the file
-on your local computer and then you can merely refresh JSON Schema Viewer in your browser and your new content will
+on your local computer and then you can merely refresh Datafactor Data Catalog in your browser and your new content will
 appear live.
 
 ### Using Bitbucket Snippets

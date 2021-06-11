@@ -13,7 +13,7 @@ import { Docs } from './Docs';
 import { getRecentlyViewedLinks, RecentlyViewedLink } from './recently-viewed';
 
 const JsonSchemaHome = () => (
-  <ProductHome icon={AtlassianIcon} logo={AtlassianLogo} siteTitle="JSON Schema Viewer" />
+  <ProductHome icon={AtlassianIcon} logo={AtlassianLogo} siteTitle="Datafactor Data Catalog" />
 );
 
 type NavigationButtonItemProps = {
@@ -54,19 +54,27 @@ const RecentlyViewedMenu: React.FC<RecentlyViewedMenuProps> = (props) => {
 
 const ExampleMenu: React.FC<ContentPropsWithClose> = (props) => (
   <PopupMenuGroup>
-    <Section title="Schema examples">
-      <NavigationButtonItem onClick={props.closePopup} exampleUrl="https://unpkg.com/@forge/manifest@latest/out/schema/manifest-schema.json">Atlassian Forge</NavigationButtonItem>
-      <NavigationButtonItem onClick={props.closePopup} exampleUrl="https://raw.githubusercontent.com/OAI/OpenAPI-Specification/3.0.3/schemas/v3.0/schema.json">OpenAPI (v3)</NavigationButtonItem>
-      <NavigationButtonItem onClick={props.closePopup} exampleUrl="https://json.schemastore.org/swagger-2.0">Swagger (v2)</NavigationButtonItem>
-      <NavigationButtonItem onClick={props.closePopup} exampleUrl="https://json.schemastore.org/package">package.json</NavigationButtonItem>
+    <Section title="OpenBDAP">
+      <NavigationButtonItem onClick={props.closePopup} exampleUrl="/schema/harvesters_openbdap_services_processors_processor_incomes_processor_schema.json">Income</NavigationButtonItem>
+      <NavigationButtonItem onClick={props.closePopup} exampleUrl="/schema/harvesters_openbdap_services_processors_processor_expenses_processor_schema.json">Expense</NavigationButtonItem>
     </Section>
-    <Section title="JSON Schema Meta Schemas">
+    <Section title="ANAC">
+      <NavigationButtonItem onClick={props.closePopup} exampleUrl="/schema/harvesters_anac_services_processors_processor_smart_cig_ocds_processor_schema.json">Smart CIG</NavigationButtonItem>
+      <NavigationButtonItem onClick={props.closePopup} exampleUrl="/schema/harvesters_anac_services_processors_processor_cig_ocds_processor_schema.json">CIG</NavigationButtonItem>
+    </Section>
+    <Section title="Publications">
+      <NavigationButtonItem onClick={props.closePopup} exampleUrl="/schema/harvesters_albo_pret-amm_trasp_services_processor_processor_albo_pret_processor_schema.json">Albo Pretorio</NavigationButtonItem>
+      <NavigationButtonItem onClick={props.closePopup} exampleUrl="/schema/harvesters_albo_pret-amm_trasp_services_processor_processor_amm_trasp_processor_schema.json">Amministrazione Trasparente</NavigationButtonItem>
+    </Section>
+    <Section title="Events">
+      <NavigationButtonItem onClick={props.closePopup} exampleUrl="/schema/events.json">Event</NavigationButtonItem>
+    </Section>
+    {/* <Section title="Logs">
       <NavigationButtonItem onClick={props.closePopup} exampleUrl="https://json-schema.org/draft-07/schema">Draft-07</NavigationButtonItem>
-      <NavigationButtonItem onClick={props.closePopup} exampleUrl="https://json-schema.org/draft-04/schema">Draft-04</NavigationButtonItem>
-    </Section>
-    <Section title="Schema repositories">
+    </Section> */}
+    {/* <Section title="Schema repositories">
       <NewTabLinkItem href="https://www.schemastore.org/" onClick={props.closePopup}>Schemastore Repository</NewTabLinkItem>
-    </Section>
+    </Section> */}
   </PopupMenuGroup>
 );
 
@@ -89,8 +97,8 @@ const HelpMenu: React.FC<ContentPropsWithClose> = (props) => {
         <NewTabLinkItem href="http://json-schema.org/understanding-json-schema/" onClick={props.closePopup}>Understanding JSON Schema</NewTabLinkItem>
       </Section>
       <Section title="Contribute">
-        <NewTabLinkItem href="https://github.com/atlassian-labs/json-schema-viewer/issues/new" onClick={props.closePopup}>Raise issue</NewTabLinkItem>
-        <NewTabLinkItem href="https://github.com/atlassian-labs/json-schema-viewer" onClick={props.closePopup}>View source code</NewTabLinkItem>
+        <NewTabLinkItem href="https://github.com/datafactorhub/json-schema-viewer/issues/new" onClick={props.closePopup}>Raise issue</NewTabLinkItem>
+        <NewTabLinkItem href="https://github.com/datafactorhub/json-schema-viewer" onClick={props.closePopup}>View source code</NewTabLinkItem>
       </Section>
     </PopupMenuGroup>
   );
@@ -129,7 +137,7 @@ class SchemaAppWR extends React.PureComponent<RouteComponentProps, SchemaAppStat
 
    render() {
     const primaryItems = [
-      <PrimaryDropdown content={props => <ExampleMenu {...props} />} text="Examples" />,
+      <PrimaryDropdown content={props => <ExampleMenu {...props} />} text="Sources" />,
       <PrimaryDropdown content={props => <HelpMenu {...props} />} text="Help" />
     ];
 
