@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  app:
+    build: '.'
+    image: ${REGISTRY_HOST}/datafactor/data_catalog:latest
+    #volumes:
+    #  - /path/to/schema/folder:/usr/share/nginx/html/schema:ro
+    ports:
+      - "8080:80"

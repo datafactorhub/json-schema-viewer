@@ -1,0 +1,12 @@
+dist
+.env
+.atlassian
+.storybook
+.git
+.gitignore
+.dockerignore
+aws
+templates
+node_modules
+Dockerfile
+docker-compose.yml
