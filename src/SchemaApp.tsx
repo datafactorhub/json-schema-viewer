@@ -13,7 +13,7 @@ import { Docs } from './Docs';
 import { getRecentlyViewedLinks, RecentlyViewedLink } from './recently-viewed';
 
 const JsonSchemaHome = () => (
-  <ProductHome icon={AtlassianIcon} logo={AtlassianLogo} siteTitle="Datafactor Data Catalog" />
+  <ProductHome icon={AtlassianIcon} logo={AtlassianLogo} siteTitle="Datafactor Data Catalog" logoMaxWidth={0} />
 );
 
 type NavigationButtonItemProps = {
