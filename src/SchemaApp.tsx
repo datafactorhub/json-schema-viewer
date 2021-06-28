@@ -66,6 +66,9 @@ const ExampleMenu: React.FC<ContentPropsWithClose> = (props) => (
       <NavigationButtonItem onClick={props.closePopup} exampleUrl="/schema/harvesters_albo_pret-amm_trasp_services_processor_processor_albo_pret_processor_schema.json">Albo Pretorio</NavigationButtonItem>
       <NavigationButtonItem onClick={props.closePopup} exampleUrl="/schema/harvesters_albo_pret-amm_trasp_services_processor_processor_amm_trasp_processor_schema.json">Amministrazione Trasparente</NavigationButtonItem>
     </Section>
+    <Section title="Registries">
+      <NavigationButtonItem onClick={props.closePopup} exampleUrl="/schema/harvesters_indicepa_services_processor_processor_schema.json">IndicePA</NavigationButtonItem>
+    </Section>
     <Section title="Events">
       <NavigationButtonItem onClick={props.closePopup} exampleUrl="/schema/events.json">Event</NavigationButtonItem>
     </Section>
